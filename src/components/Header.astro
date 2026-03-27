@@ -1,10 +1,39 @@
-<div>
-  <div>
-    
+---
+interface Props {
+  title: string,
+}
+
+const { title } = Astro.props;
+
+---
+<div class="head">
+  <div class="logo">
+      <img src="https://docs.astro.build/_astro/CodingInPublic.DpaYu7Qd_1BEEUO.webp" alt="webp">
   </div>
-  <div>
+  <div class="menu">
     <ul>
+      <li><a href="#">Inicio</a></li>
       <li><a href="#">Galeria</a></li>
     </ul>
   </div>
 </div>
+
+
+<style>
+.head {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu ul {
+  display: inline-block;
+}
+
+li a {
+  background-color: darkblue;
+  color: white;
+}
+
+</style>
